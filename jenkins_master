@@ -16,7 +16,7 @@ pipeline {
                     def lines = data.readLines()
 
                      echo 'Start Trigger to send name and age to slave'
-                     build job: 'slave_homework', parameters: [string(name: 'NAME', value: lines.get(0)), string(name: 'Ages', value: lines.get(1))]
+                     build job: 'slave', parameters: [string(name: 'NAME', value: lines.get(0)), string(name: 'Ages', value: lines.get(1))]
                 } 
             }
         }
